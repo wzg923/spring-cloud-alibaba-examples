@@ -1,3 +1,11 @@
+# spring-cloud-alibaba-examples
+
+集成了 spring-cloud-alibaba-0.9.0.RELEASE、Jeecg-Boot-1.1.0功能，这是一个新手学习项目。
+
+
+
+
+
 # Spring Cloud Alibaba
 
 [![CircleCI](https://circleci.com/gh/spring-cloud-incubator/spring-cloud-alibaba/tree/master.svg?style=svg)](https://circleci.com/gh/spring-cloud-incubator/spring-cloud-alibaba/tree/master)
@@ -23,6 +31,8 @@ Spring Cloud Alibaba 致力于提供微服务开发的一站式解决方案。�
 * **阿里云对象存储**：阿里云提供的海量、安全、低成本、高可靠的云存储服务。支持在任何应用、任何时间、任何地点存储和访问任意类型的数据。
 * **分布式任务调度**：提供秒级、精准、高可靠、高可用的定时（基于 Cron 表达式）任务调度服务。同时提供分布式的任务执行模型，如网格任务。网格任务支持海量子任务均匀分配到所有 Worker（schedulerx-client）上执行。
 * **阿里云短信服务**：覆盖全球的短信服务，友好、高效、智能的互联化通讯能力，帮助企业迅速搭建客户触达通道。
+
+* **SpringGateway网关，服务动态发现与代理。
 
 
 更多功能请参考 [Roadmap](https://github.com/spring-cloud-incubator/spring-cloud-alibaba/blob/master/Roadmap-zh.md)。

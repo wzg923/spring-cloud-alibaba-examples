@@ -1,3 +1,11 @@
+# spring-cloud-alibaba-examples
+
+Integrated with spring-cloud-alibaba-0.9.0.RELEASE、Jeecg-Boot-1.1.0，this is a learning example.
+
+
+
+
+
 # Spring Cloud Alibaba
 
 [![CircleCI](https://circleci.com/gh/spring-cloud-incubator/spring-cloud-alibaba/tree/master.svg?style=svg)](https://circleci.com/gh/spring-cloud-incubator/spring-cloud-alibaba/tree/master)
@@ -24,6 +32,8 @@ With Spring Cloud Alibaba, you only need to add some annotations and a small amo
 * **Alibaba Cloud Object Storage**：massive, secure, low-cost, and highly reliable cloud storage services. Support for storing and accessing any type of data in any application, anytime, anywhere.
 * **Alibaba Cloud SchedulerX**：accurate, highly reliable, and highly available scheduled job scheduling services with response time within seconds.
 * **Alibaba Cloud SMS**： A messaging service that covers the globe, Alibaba SMS provides convenient, efficient, and intelligent communication capabilities that help businesses quickly contact their customers.
+
+* **Spring Gateway+Nacos dynamic route.
 
 For more features, please refer to [Roadmap](https://github.com/spring-cloud-incubator/spring-cloud-alibaba/blob/master/Roadmap.md).
 
