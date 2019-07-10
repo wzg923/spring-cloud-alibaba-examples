@@ -1,6 +1,14 @@
 [
   {
-    "resource": "GET:http://service-provider/echo/{str}",
+    "resource": "GET:http://service-provider/echo/abc",
+    "controlBehavior": 0,
+    "count": 10,
+    "grade": 1,
+    "limitApp": "default",
+    "strategy": 0
+  },
+  {
+    "resource": "GET:http://service-provider/sleep/1",
     "controlBehavior": 0,
     "count": 1,
     "grade": 1,

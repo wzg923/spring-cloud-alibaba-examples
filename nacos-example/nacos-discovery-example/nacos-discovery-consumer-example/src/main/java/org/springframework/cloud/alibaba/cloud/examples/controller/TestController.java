@@ -26,6 +26,12 @@ public class TestController {
 				String.class);
 	}
 
+	@RequestMapping(value = "/rest/sleep/{str}", method = RequestMethod.GET)
+	public String testSleep(@PathVariable String str) {
+		return restTemplate.getForObject("http://service-provider/sleep/"+str,
+				String.class);
+	}
+
 	@RequestMapping(value = "/notFound-feign", method = RequestMethod.GET)
 	public String notFound() {
 		return echoService.notFound();
