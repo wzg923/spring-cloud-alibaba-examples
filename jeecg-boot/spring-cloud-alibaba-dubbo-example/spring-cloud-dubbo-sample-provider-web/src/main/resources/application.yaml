@@ -1,0 +1,36 @@
+dubbo:
+  scan:
+    # dubbo 服务扫描基准包
+    base-packages: org.springframework.cloud.alibaba.dubbo.service
+  protocols:
+    # dubbo 协议
+    dubbo:
+      name: dubbo
+      # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+      port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
+    # 挂载到  Dubbo's registry
+    #address: zookeeper://127.0.0.1:2181
+  application:
+    qos:
+      enable: true
+      port: 22221
+      accept:
+        foreign:
+          ip: false
+
+
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 8084
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: dubborestmetadata

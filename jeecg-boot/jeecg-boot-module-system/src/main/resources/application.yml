@@ -1,0 +1,10 @@
+#spring:
+#  profiles:
+#    active: dev
+
+swagger:
+  production: false
+  basic:
+    enable: true
+    username: jeecg
+    password: 123456

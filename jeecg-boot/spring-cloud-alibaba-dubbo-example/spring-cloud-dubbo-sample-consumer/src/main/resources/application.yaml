@@ -1,0 +1,27 @@
+dubbo:
+  registry:
+    #   The Spring Cloud Dubbo's registry extension
+    ##  the default value of dubbo-provider-services is "*", that means to subscribe all providers,
+    ##  thus it's optimized if subscriber specifies the required providers.
+    address: spring-cloud://localhost
+#   The traditional Dubbo's registry also is supported
+#   address: zookeeper://127.0.0.1:2181
+  cloud:
+    # The subscribed services in consumer side
+    #用于服务消费方订阅服务提供方的应用名称的列表，若需订阅多应用，使用 "," 分割。 不推荐使用默认值为 "*"，它将订阅所有应用
+    #subscribed-services: ${provider.application.name}
+  application:
+    qos:
+      enable: false
+      port: 22224
+      accept:
+        foreign:
+          ip: false
+
+
+server:
+  port: 0
+
+provider:
+  application:
+    name: "spring-cloud-alibaba-dubbo-sample-provider-web"
