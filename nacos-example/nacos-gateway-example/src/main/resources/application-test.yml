@@ -1,4 +1,4 @@
-#如果启用nacos config，这里配置的内容都不会生效
+#如果启用nacos config，这里配置的相同内容都不会生效，差异性的内容有效，优先级 远程配置> 本地配置
 spring:
   cloud:
     nacos:
@@ -20,7 +20,26 @@ spring:
           filters:
             - StripPrefix=1
             - RequestTime=true
-            - AddRequestHeader=X-Request-Foo, Bar!!!
+            - AddRequestHeader=X-Request-Foo,value1
+        #- id: hello-service
+        #  predicates:
+        #    - Path=/hello-service/**
+        #  uri: "lb://service-provider"
+        #  filters:
+        #    - StripPrefix=1
+
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      eager: true
+    #流量控制规则 (FlowRule)
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+
 
 nacos:
   dataId: gateway_config_json
@@ -46,3 +65,14 @@ management:
         include: '*'
   security:
     enabled: false
+
+
+#指定您要接入的特定的 AHAS 环境
+ahas:
+  namespace: default
+  #通过公网地域接入时，需要您的证书信息；其他地域不需要证书。
+  #证书获取方式：在 AHAS 控制台左侧导航栏，选择流控降级 > 网关流控，选择右上角网关接入，在配置启动参数页签下，找到您的证书信息。
+  license: eca5a77fb94f4379a62715608c56a6d7
+#自定义您的应用名称，例如 spring-cloud-gateway
+project:
+  name: spring-cloud-gateway

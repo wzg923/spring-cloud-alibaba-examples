@@ -10,7 +10,7 @@
   {
     "resource": "GET:http://service-provider/sleep/1",
     "controlBehavior": 0,
-    "count": 1,
+    "count": 0,
     "grade": 1,
     "limitApp": "default",
     "strategy": 0

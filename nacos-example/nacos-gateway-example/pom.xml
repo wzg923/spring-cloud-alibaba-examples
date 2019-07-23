@@ -19,6 +19,7 @@
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 		<spring-cloud-alibaba.version>0.9.0.RELEASE</spring-cloud-alibaba.version>
+		<com.alibaba.csp.sentinel.version>1.6.2</com.alibaba.csp.sentinel.version>
 	</properties>
 
 	<dependencyManagement>
@@ -54,19 +55,33 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
+
+		<!--sentinel gateway adapter-->
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
+			<version>${com.alibaba.csp.sentinel.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>sentinel-transport-simple-http</artifactId>
+		</dependency>
+		<!--AHAS-sentine-->
 		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>com.alibaba.csp</groupId>
+			<artifactId>spring-cloud-gateway-starter-ahas-sentinel</artifactId>
+			<version>1.0.1</version>
 		</dependency>-->
-		<!--<dependency>
+
+
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>-->
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
