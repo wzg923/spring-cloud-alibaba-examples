@@ -69,3 +69,7 @@
 /rocketmq-example/rocketmq-consume-example/target
 /rocketmq-example/rocketmq-produce-example/rocketmq-produce-example.iml
 /rocketmq-example/rocketmq-produce-example/target
+/nacos-server-1.0.0/nacos/logs/*.0
+/nacos-server-1.0.0/nacos/logs/*.log
+/nacos-server-1.0.0/nacos/logs
+/nacos-server-1.0.0/nacos/bin/logs
